@@ -1,0 +1,2 @@
+# Local vars setup with defaults
+DEPLOYMENTS_DIR="${DEPLOYMENTS_DIR:-/deployments}"

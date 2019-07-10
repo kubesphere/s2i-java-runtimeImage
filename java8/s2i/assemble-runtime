@@ -1,0 +1,3 @@
+echo "start script assemble-runtime ...."
+
+mv deployments /opt/run-java/
