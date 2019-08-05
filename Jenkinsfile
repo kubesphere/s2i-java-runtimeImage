@@ -2,7 +2,7 @@ pipeline {
   agent {
     node {
       label 'maven'
-
+      }
   }
   stages {
     stage('build and tag image') {
