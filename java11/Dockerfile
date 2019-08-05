@@ -1,4 +1,4 @@
-FROM openjdk:11-jre
+FROM openjdk:11-jre-slim
 
 ARG EXPOSE_PORT=8080
 EXPOSE ${EXPOSE_PORT}
