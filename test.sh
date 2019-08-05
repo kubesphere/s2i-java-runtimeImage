@@ -205,7 +205,7 @@ function test_tomcat_java11_image() {
 # ==================================================================================
 
 mkdir tmp && cd tmp && git clone https://github.com/kubesphere/s2i-java-container
-
+ls
 test_runtime_image "java8" "s2i-java8-runtime" "kubespheredev/java-8-centos7"
 test_runtime_image "java11" "s2i-java11-runtime" "kubespheredev/java-11-centos7"
 
