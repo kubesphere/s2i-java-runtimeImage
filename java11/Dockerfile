@@ -1,4 +1,4 @@
-FROM openjdk:11-jre
+FROM openjdk:11-jre-slim
 
 ARG EXPOSE_PORT=8080
 EXPOSE ${EXPOSE_PORT}
@@ -13,6 +13,7 @@ LABEL io.k8s.description="Platform for running plain Java applications (fat-jar 
       io.kubespehre.s2i.destination="/tmp" \
       io.openshift.s2i.scripts-url="image:///usr/local/s2i" \
       io.openshift.s2i.destination="/tmp" \
+      io.openshift.s2i.assemble-input-files="/deployments" \
       com.yunify.deployments-dir="/deployments" \
       com.yunify.dev-mode="JAVA_DEBUG:false" \
       com.yunify.dev-mode.port="JAVA_DEBUG_PORT:5005"
