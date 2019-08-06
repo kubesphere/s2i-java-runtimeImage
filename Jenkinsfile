@@ -36,6 +36,9 @@ pipeline {
       }
       steps {
         container('maven') {
+          withCredentials([usernamePassword(passwordVariable : 'DOCKER_PASSWORD' ,usernameVariable : 'DOCKER_USERNAME' ,credentialsId : 'dockerhub-id' ,)]) {
+            sh 'echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin'
+          }
                 sh '''docker push kubespheredev/java-8-runtime
                 docker push kubespheredev/java-11-runtime
                 docker push kubespheredev/tomcat85-java8-runtime
