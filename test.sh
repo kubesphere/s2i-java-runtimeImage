@@ -204,7 +204,7 @@ function test_tomcat_java11_image() {
 
 # ==================================================================================
 
-mkdir tmp && cd tmp && git clone https://github.com/kubesphere/s2i-java-container & cd ..
+mkdir tmp && cd tmp && git clone https://github.com/kubesphere/s2i-java-container && cd ..
 
 ls
 
