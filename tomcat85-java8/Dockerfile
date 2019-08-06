@@ -47,6 +47,10 @@ RUN chmod 755 /opt/apache-tomcat-${TOMCAT_VERSION}/bin/deploy-and-run.sh \
 COPY s2i /usr/local/s2i
 RUN chmod 755 /usr/local/s2i/*
 
+# Add run script as /opt/run-java/run-java.sh and make it executable
+COPY run-java /opt/run-java/
+RUN chmod 755 /opt/run-java/*
+
 
 VOLUME [ "/opt/tomcat/logs", "/opt/tomcat/work", "/opt/tomcat/temp", "/tmp/hsperfdata_root" ]
 
