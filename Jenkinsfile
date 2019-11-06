@@ -27,6 +27,11 @@ pipeline {
                 docker tag tomcat85-java8-runtime kubespheredev/tomcat85-java8-runtime
                 docker tag tomcat85-java11-runtime kubespheredev/tomcat85-java11-runtime
                 '''
+                sh '''docker tag s2i-java8-runtime kubespheredev/java-8-runtime:2.1
+                docker tag s2i-java11-runtime kubespheredev/java-11-runtime:2.1
+                docker tag tomcat85-java8-runtime kubespheredev/tomcat85-java8-runtime:2.1
+                docker tag tomcat85-java11-runtime kubespheredev/tomcat85-java11-runtime:2.1
+                '''
             }
           }
      }
