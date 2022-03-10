@@ -25,7 +25,7 @@ ENV TOMCAT_VERSION 8.5.32
 USER root
 
 #Install package
-RUN apk add --update ttf-dejavu fontconfig \
+RUN yum -y install fontconfig \
     && fc-cache --force
 
 # Get and Unpack Tomcat
