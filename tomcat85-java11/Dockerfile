@@ -25,8 +25,7 @@ ENV TOMCAT_VERSION 8.5.32
 USER root
 
 #Install package
-RUN yum -y install fontconfig \
-    && fc-cache --force
+RUN apt update && apt -y install fontconfig
 
 # Get and Unpack Tomcat
 RUN apt-get update \
