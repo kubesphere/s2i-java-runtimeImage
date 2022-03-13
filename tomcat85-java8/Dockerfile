@@ -25,7 +25,7 @@ ENV TOMCAT_VERSION 8.5.32
 USER root
 
 #Install package
-RUN apk add --update ttf-dejavu fontconfig \
+RUN apk add --update --no-cache ttf-dejavu fontconfig \
     && fc-cache --force
 
     

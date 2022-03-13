@@ -19,7 +19,9 @@ LABEL io.k8s.description="Platform for running plain Java applications (fat-jar 
       com.yunify.dev-mode.port="JAVA_DEBUG_PORT:5005"
 
 #Install package
-RUN apt update && apt -y install fontconfig
+RUN apt update && apt -y install \
+      fontconfig \
+      && rm -rf /var/lib/apt/list/*
 
 # S2I scripts + README
 COPY s2i /usr/local/s2i
