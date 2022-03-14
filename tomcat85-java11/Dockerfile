@@ -24,6 +24,10 @@ ENV TOMCAT_VERSION 8.5.32
 
 USER root
 
+#Install package
+RUN apt update && apt -y install \
+      fontconfig \
+      && rm -rf /var/lib/apt/list/*
 
 # Get and Unpack Tomcat
 RUN apt-get update \
