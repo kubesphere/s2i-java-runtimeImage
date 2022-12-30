@@ -94,7 +94,7 @@ jobs:
       with:
         images: |
           kubespheredev/java-11-centos7
-          ghcr.io/${{ github.repository_owner }}/java-11-centos7
+          ghcr.io/${{ github.repository_owner }}/java-11-runtime
         tags: |
           type=schedule
           type=ref,event=branch
@@ -109,7 +109,7 @@ jobs:
       uses: docker/metadata-action@v3
       with:
         images: |
-          ghcr.io/${{ github.repository_owner }}/java-11-centos7
+          ghcr.io/${{ github.repository_owner }}/java-11-runtime
         tags: |
           type=schedule
           type=ref,event=branch
