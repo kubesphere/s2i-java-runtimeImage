@@ -1,4 +1,4 @@
-FROM openjdk:8-alpine
+FROM eclipse-temurin:8-jdk-alpine
 
 ARG EXPOSE_PORT=8080
 EXPOSE ${EXPOSE_PORT}
