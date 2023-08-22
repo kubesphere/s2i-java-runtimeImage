@@ -1,4 +1,4 @@
-FROM openjdk:8-alpine
+FROM eclipse-temurin:8-jdk-alpine
 
 
 MAINTAINER kubesphere@yunify.com
@@ -20,7 +20,7 @@ LABEL io.kubesphere.s2i.version.maven="3.5.4" \
 
 EXPOSE 8080
 
-ENV TOMCAT_VERSION 8.5.32
+ENV TOMCAT_VERSION 8.5.92
 
 USER root
 
