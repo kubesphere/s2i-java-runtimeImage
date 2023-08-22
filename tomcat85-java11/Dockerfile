@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim
+FROM eclipse-temurin:11-jre-alpine
 
 
 MAINTAINER kubesphere@yunify.com
@@ -20,14 +20,13 @@ LABEL io.kubesphere.s2i.version.maven="3.5.4" \
 
 EXPOSE 8080
 
-ENV TOMCAT_VERSION 8.5.32
+ENV TOMCAT_VERSION 8.5.92
 
 USER root
 
 #Install package
-RUN apt update && apt -y install \
-      fontconfig \
-      && rm -rf /var/lib/apt/list/*
+RUN apk upgrade && apk add --update --no-cache ttf-dejavu fontconfig \
+    && fc-cache --force
 
 # Get and Unpack Tomcat
 RUN apt-get update \
